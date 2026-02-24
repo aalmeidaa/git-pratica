@@ -1,2 +1,2 @@
 # git-pratica
-Este é um repositório de prática de Git.
+Linha temporária para teste de revert.
