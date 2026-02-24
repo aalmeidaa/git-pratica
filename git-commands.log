@@ -1,0 +1,36 @@
+# Log de comandos executados no exercício git-pratica
+
+Comandos executados (ordem aproximada):
+
+- git checkout -b feature/novo-recurso
+- (editei `README.md` localmente)
+- git add README.md
+- git commit -m "Adiciona linha de descrição na feature/novo-recurso"
+- git push -u origin feature/novo-recurso
+- gh pr create --title "Adiciona descrição no README" --body "Adiciona linha de descrição no README" --base main --head feature/novo-recurso
+- gh pr merge feature/novo-recurso --merge --delete-branch
+- git checkout main
+- git pull origin main
+- (editei `README.md` adicionando linha para reverter)
+- git add README.md
+- git commit -m "Adiciona nova linha para reverter"
+- git revert HEAD --no-edit
+- git push origin main
+- git tag -a v1.0.0 -m "Primeira versão estável"  # tag já existia localmente
+- git push origin v1.0.0
+- git push origin --delete feature/novo-recurso || true
+- $BROWSER https://github.com/aalmeidaa/git-pratica/pull/2
+- $BROWSER https://github.com/aalmeidaa/git-pratica
+- $BROWSER https://github.com/aalmeidaa/git-pratica/commit/0862b8d
+- $BROWSER https://github.com/aalmeidaa/git-pratica/releases/tag/v1.0.0
+
+URLs relevantes:
+
+- Pull Request: https://github.com/aalmeidaa/git-pratica/pull/2
+- Repositório: https://github.com/aalmeidaa/git-pratica
+- Commit (HEAD após revert): https://github.com/aalmeidaa/git-pratica/commit/0862b8d
+- Tag: https://github.com/aalmeidaa/git-pratica/releases/tag/v1.0.0
+
+Observações:
+- A tag `v1.0.0` já existia localmente quando tentei criá-la.
+- A branch remota `feature/novo-recurso` foi removida ao mesclar o PR.
